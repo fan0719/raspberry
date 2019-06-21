@@ -21,6 +21,7 @@
 	<body>
 		<button type="button" id="clickON">ON</button><br>
 		<button type="button" id="clickOFF">OFF</button><br>
+		<iframe src="http://yuancafe.wpgo.in/" width="800px" height="500px"></iframe>
 
 	</body>
 
