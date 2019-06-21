@@ -4,12 +4,12 @@
 		<script type="text/javascript">
 		document.getElementById("clickON").onclick(function(){
 					var a = new XMLHttpRequest();
-					a.open("GET","pinon.php");
+					a.open("GET","http://203.74.132.1/pinon.php");
 					a.send();
 		});
 		document.getElementById("clickOFF").onclick(function(){
 					var a = new XMLHttpRequest();
-					a.open("GET","pinoff.php");
+					a.open("GET","http://203.74.132.1/pinoff.php");
 					a.send();
 		});
 		</script>
