@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<script type="text/javascript">
+			function init(){
+				var btnon=document.getElementById("clickON");
+				btnon.onclick=function(){
+					var a = new XMLHttpRequest();
+					a.open("GET","http://127.0.0.1/pinon.php");
+					a.send();					
+				};
+
+
+				var btnoff=document.getElementById("clickOFF");
+				btnoff.onclick=function(){
+					var a = new XMLHttpRequest();
+					a.open("GET","http://127.0.0.1/pinoff.php");
+					a.send();
+				};
+			};		
+		</script>
+		<title>Pi Controller</title>
+	</head>
+	<body onload="init();">
+		<button id="clickON">ON</button><br>
+		<button id="clickOFF">OFF</button><br>
+	</body>
+</html>
