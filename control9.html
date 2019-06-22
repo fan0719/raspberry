@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			function init(){
+				var btnon=document.getElementById("clickON");
+				btnon.onclick=function(){
+					var a = new XMLHttpRequest();
+					a.open("GET","http://127.0.0.1/pinon.php");
+					a.send();
+					var toggleimgon = document.getElementById("toggleimgon").getAttribute("src");
+					var toggleimgoff = document.getElementById("toggleimgoff").getAttribute("src");
+					if(toggleimgon=="on.jpg"){
+						document.getElementById("toggleimgon").src="on_red.jpg";
+						document.getElementById("toggleimgoff").src="off.jpg";
+					}
+				};
+
+
+				var btnoff=document.getElementById("clickOFF");
+				btnoff.onclick=function(){
+					var a = new XMLHttpRequest();
+					a.open("GET","http://127.0.0.1/pinoff.php");
+					a.send();
+					var toggleimgon = document.getElementById("toggleimgon").getAttribute("src");
+					var toggleimgoff = document.getElementById("toggleimgoff").getAttribute("src");
+					if(toggleimgoff=="off.jpg"){
+						document.getElementById("toggleimgon").src="on.jpg";
+						document.getElementById("toggleimgoff").src="off_red.jpg";
+					}
+				};
+			};		
+		</script>
+		
+		<title>Pi Controller</title>
+	</head>
+	<body  onload="init();">
+		<table align="center" width="737" height="665" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="3">
+					<img src="gpio_img_inout_red_01.gif" width="737" height="266" alt=""></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="gpio_img_inout_red_02.gif" width="559" height="32" alt=""></td>
+				<td id="clickON">
+					<img id="toggleimgon" src="on.jpg" width="90" height="32" alt=""></td>
+				<td id="clickOFF">
+					<img id="toggleimgoff" src="off_red.jpg" width="88" height="32" alt=""></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<img src="gpio_img_inout_red_05.jpg" width="737" height="367" alt=""></td>
+			</tr>
+		</table>
+	</body>
+</html>
