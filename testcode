@@ -13,7 +13,7 @@
 
 				$('#clickOFF').click(function(){
 					var a = new XMLHttpRequest();
-					a.open("GET","http://203.74.132.1/pinoff.php");
+					a.open("GET","http://127.0.0.1/pinoff.php");
 					a.send();
 				});
 			});
