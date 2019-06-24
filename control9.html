@@ -6,7 +6,7 @@
 				var btnon=document.getElementById("clickON");
 				btnon.onclick=function(){
 					var a = new XMLHttpRequest();
-					a.open("GET","http://127.0.0.1/pinon.php");
+					a.open("GET","http://203.74.132.1/pinon.php");
 					a.send();
 					var toggleimgon = document.getElementById("toggleimgon").getAttribute("src");
 					var toggleimgoff = document.getElementById("toggleimgoff").getAttribute("src");
@@ -20,7 +20,7 @@
 				var btnoff=document.getElementById("clickOFF");
 				btnoff.onclick=function(){
 					var a = new XMLHttpRequest();
-					a.open("GET","http://127.0.0.1/pinoff.php");
+					a.open("GET","http://203.74.132.1/pinoff.php");
 					a.send();
 					var toggleimgon = document.getElementById("toggleimgon").getAttribute("src");
 					var toggleimgoff = document.getElementById("toggleimgoff").getAttribute("src");
